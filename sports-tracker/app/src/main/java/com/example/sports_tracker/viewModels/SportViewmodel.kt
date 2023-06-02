@@ -39,18 +39,18 @@ class SportViewmodel(private val sportRepository: SportRepository):ViewModel(){
         return true
     }
 
-    fun createDog(){
+    fun createSport(){
         if(!validatData()){
             status.value = WRONG_INFORMATION
             return
         }
 
-        val dog = Sport(
+        val sport = Sport(
             name.value!!,
             deporte.value!!,
         )
 
-        addSport(dog)
+        addSport(sport)
         clearData()
         status.value = SPORT_CREATED
     }
@@ -64,7 +64,7 @@ class SportViewmodel(private val sportRepository: SportRepository):ViewModel(){
         status.value= INACTIVE
     }
 
-    fun setselectDog(sport: Sport){
+    fun setselectSport(sport: Sport){
         name.value=sport.name
         deporte.value=sport.deporte
     }

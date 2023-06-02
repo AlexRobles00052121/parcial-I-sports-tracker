@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sportsFragment">
+
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="com.example.sports_tracker.ui.SportsFragment"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" >
+        <action
+            android:id="@+id/action_sportsFragment_to_newSportFragment"
+            app:destination="@id/newDogFragment" />
+        <action
+            android:id="@+id/action_sportsFragment_to_sportFragment"
+                app:destination="@id/sportFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportFragment"
+        android:name="com.example.sports_tracker.ui.SportFragment"
+        android:label="fragment_dog"
+        tools:layout="@layout/fragment_sport" >
+        <action
+            android:id="@+id/action_sportFragment_to_sportsFragment"
+            app:destination="@id/sportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDogFragment"
+        android:name="com.example.sports_tracker.ui.NewSportFragment"
+        android:label="fragment_new_sport"
+        tools:layout="@layout/fragment_new_sport" >
+        <action
+            android:id="@+id/action_newDogFragment_to_dogsFragment"
+            app:destination="@id/sportsFragment" />
+    </fragment>
+
+</navigation>

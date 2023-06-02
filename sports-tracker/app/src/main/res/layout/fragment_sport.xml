@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.sports_tracker.viewModels.SportViewmodel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".ui.SportFragment">
+
+        <TextView
+            android:id="@+id/name_sport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="30sp"
+            tools:text="name equipo"
+            android:text="@={viewmodel.name}"/>
+
+        <TextView
+            android:id="@+id/deporte_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textSize="16sp"
+            tools:text="Deporte del equipo"
+            android:text="@={viewmodel.deporte}"/>
+
+
+    </LinearLayout>
+</layout>

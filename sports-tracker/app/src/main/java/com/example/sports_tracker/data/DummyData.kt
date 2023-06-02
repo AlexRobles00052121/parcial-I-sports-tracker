@@ -7,7 +7,7 @@ val name2 = "Real Madrid"
 val deporte2 = "Soccer"
 
 
-val sports = mutableListOf(
+val sports= mutableListOf(
     Sport(name, deporte),
     Sport(name2, deporte2)
 )
